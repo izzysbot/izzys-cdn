@@ -1,0 +1,219 @@
+.panel{
+    display: flex;
+    justify-content: center;
+    max-width: 1280px;
+    margin: 20px;
+    width: 100%;
+}
+
+.panel .categories{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    border-radius: 10px;
+    width: 50%;
+    margin: 10px;
+}
+
+.panel .categories .categorie label{
+    display: block;
+    padding: 15px;
+    background-color: rgb(151, 68, 184);
+    margin: 5px;
+    border-radius: 5px;
+    border: 2px solid rgb(106, 35, 128);
+    font-size: 14pt;
+    text-decoration: none;
+    animation: fade .5s 1 ease both;
+    cursor: pointer;
+    transition: .1s ease;
+}
+
+.panel .categories .categorie .rd-check{
+    display: none;
+}
+
+.panel .categories .categorie .rd-check:checked ~ label{
+    background-color: rgb(106, 35, 128);
+    border: 2px solid rgb(151, 68, 184);
+}
+
+.panel .commands{
+    border-radius: 10px;
+    width: 100%;
+    height: 853px;
+    overflow-y: auto;
+}
+
+.panel .commands::-webkit-scrollbar{
+    background-color: transparent;
+}
+
+.panel .commands .command{
+    margin: 10px;
+    background-color: #414141;
+    border-radius: 5px;
+    border: 2px solid #303030;
+    animation: fade .5s 1 ease both;
+}
+
+.panel .commands .command .rdcmd{
+    display: none;
+}
+
+.panel .commands .command .rdcmd:checked ~ .command-description{
+    display: block;
+}
+
+.panel .commands .command .rdcmd:checked ~ label .arrow{
+    transform: rotate(90deg);
+}
+
+.panel .commands .command .command-name{
+    font-size: 18pt;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 20px;
+    position: relative;
+}
+
+.panel .commands .command .command-name::after{
+    content: attr(data-categorie);
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgb(140, 0, 255);
+    padding: 5px 20px;
+    border-radius: 0 4px 0 10px;
+    border-top: 5px solid rgb(140, 0, 255);
+    border-left: 5px solid #414141;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.panel .commands .command .command-name .arrow{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    margin-right: 10px;
+    filter: invert(100%);
+    transition: .3s ease;
+    user-select: none;
+    pointer-events: none;
+}
+
+.panel .commands .command .command-description{
+    display: flex;
+    margin: 10px 0;
+    flex-direction: column;
+    justify-content: space-evenly;
+    display: none;
+    transition: .5s ease;
+    padding: 20px;
+}
+
+.panel .commands .command .command-description .descrição{
+    font-size: 14pt;
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 0 10px 10px 10px;
+    background-color: #303030;
+    position: relative;
+}
+
+.panel .commands .command .command-description .descrição::before{
+    content: 'Sobre o comando';
+    font-weight: bold;
+    font-family: 'Arial Black';
+    position: absolute;
+    top: -52px;
+    background-color: #303030;
+    color: rgb(162, 0, 255);
+    border-right: 5px solid #414141;
+    border-bottom: 5px solid #303030;
+    border-radius: 10px 10px 0 0;
+    padding: 10px;
+    left: 0;
+    box-shadow: 0 5px 0 #303030;
+}
+
+.panel .commands .command .command-description .tutorial{
+    font-size: 14pt;
+    margin: 70px 0 20px 0;
+    padding: 10px;
+    border-radius: 10px 0 10px 10px;
+    background-color: #303030;
+    position: relative;
+    text-align: right;
+}
+
+.panel .commands .command .command-description .tutorial::before{
+    content: 'Como usar o comando';
+    font-weight: bold;
+    font-family: 'Arial Black';
+    position: absolute;
+    top: -52px;
+    background-color: #303030;
+    color: rgb(162, 0, 255);
+    border-radius: 10px 10px 0 0;
+    border-left: 5px solid #414141;
+    border-bottom: 5px solid #303030;
+    padding: 10px;
+    right: 0;
+    box-shadow: 0 5px 0 #303030;
+}
+
+.panel .commands .command .command-description .example{
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.panel .commands .command .command-description .example::after{
+    content: 'Exemplo';
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: darkviolet;
+    padding: 20px;
+    border-radius: 0 0 0 10px;
+    font-weight: bold;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, .3);
+}
+
+.panel .commands .command .command-description .example img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes fade{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 640px){
+    .panel{
+        flex-direction: column;
+        width: auto;
+    }
+    .panel .categories{
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0;
+    }
+    .panel .categories .categorie{
+        flex: auto;
+    }
+    .panel .commands{
+        height: auto;
+        overflow: hidden;
+    }
+}

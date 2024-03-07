@@ -1,0 +1,25 @@
+{
+  "name": "izzys-cdn",
+  "version": "1.0.0",
+  "description": "This is the Izzys CDN page. Feel free to upload any file here. Just remember to save the URL if you intend to use it later. If you prefer using the API, examples of usage and responses are provided below. Please use responsibly. This code is open-source and available in the Izzys repository.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon ."
+  },
+  "author": "xduke_br",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "form-data": "^4.0.0",
+    "lodash": "^4.17.21",
+    "redis": "^4.2.0",
+    "replace-special-characters": "^1.2.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}

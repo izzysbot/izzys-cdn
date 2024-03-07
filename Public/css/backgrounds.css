@@ -1,0 +1,44 @@
+mark{
+    padding: 2px 5px;
+    background-color: #303030;
+    color: #616161;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.wrapper-backgrounds{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.wrapper-backgrounds a{
+    text-decoration: none;
+    margin: 20px;
+}
+
+.wrapper-backgrounds a .item{
+    text-align: center;
+}
+
+.wrapper-backgrounds a .item img{
+    width: 360px;
+    height: 265px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #e800e8;
+    box-shadow: 0 0 30px rgba(232, 0, 232, .3);
+}
+
+.wrapper-backgrounds a .item h1{
+    padding: 20px;
+    border-bottom: 1px solid #e800e8;
+}
+
+@media (max-width: 1024px){
+    .wrapper-backgrounds a .item img{
+        width: 90vw;
+        height: 245px;
+    }
+}

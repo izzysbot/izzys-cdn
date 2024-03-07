@@ -1,0 +1,18 @@
+{
+  "name": "Izzys-cdn",
+  "description": "The Izzys CDN hosts unlimited files, leveraging Discord's S3 as its storage foundation.",
+  "repository": "https://github.com/izzysbot/izzys-cdn",
+  "logo": "https://cdn.discordapp.com/attachments/798685888837976105/1213630434597011567/Menhara_Chan.png?ex=65f62c6b&is=65e3b76b&hm=a153c5ff0731b58c499d6b6fe7e8e49965d5f9d96c1883043275dea35e17c557&",
+  "keywords": ["node", "express", "discord", "cdn", "storage", "file", "cdn", "unlimited"],
+  "env": {
+    "REDIS_URL": {
+      "required": true
+    },
+    "DISCORD_BOT_TOKEN": {
+      "required": true
+    },
+    "DISCORD_CHANNEL_ID": {
+      "required": true
+    }
+  }
+}

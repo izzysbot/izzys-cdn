@@ -1,0 +1,369 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+    background-color:#000000;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(160, 31, 219);
+    border-radius: 50px;
+}
+
+body{
+    background-color: rgb(24, 17, 23);
+    color: #fff;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    color: #fff;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    background-color: rgb(48, 0, 56);
+    height: 100px;
+    font-size: 16pt;
+}
+
+.menu ul.ul-mobile{
+    display: none;
+}
+
+.menu a{
+    text-decoration: none;
+}
+
+.menu .logo{
+    margin: 20px;
+}
+
+.menu ul{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.menu ul li{
+    list-style: none;
+    display: inline;
+}
+
+.menu ul li a{
+    margin: 20px;
+    text-decoration: none;
+}
+
+.cabeçalho{
+    background-color: rgb(22, 24, 29);
+    height: 85vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 18pt;
+    overflow: hidden;
+    position: relative;
+}
+
+.cabeçalho::after{
+    content: '';
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(transparent, rgb(24, 17, 23));
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.cabeçalho .left{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.cabeçalho .left .izzys{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 90%;
+    margin: 0 100px;
+    animation: izzys 1s 1 ease both;
+    filter: drop-shadow(0 0 30px rgba(0, 0, 0, .75));
+}
+
+.cabeçalho .right{
+    width: 100%;
+    margin: 0 100px;
+}
+
+.cabeçalho .right h1{
+    animation: fadeTop 1s 1 ease both;
+}
+
+.cabeçalho .right p{
+    animation: fadeRight 1.5s 1 ease both;
+}
+
+.cabeçalho .right .add{
+    width: 240px;
+    padding: 20px;
+    background: linear-gradient(160deg, #a800b8, #750080);
+    color: #ffffff;
+    font-size: 14pt;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .3);
+    animation: fadeBottom 2s 1 ease both;
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto;
+}
+
+.conteudo .info{
+    max-width: 1366px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+    border-right: 4px solid #a800b8;
+    border-radius: 4px;
+}
+
+.conteudo .info:nth-child(2n){
+    border-right: none;
+    border-left: 4px solid #a800b8;
+}
+
+.conteudo .info img{
+    max-width: 640px;
+    width: 100%;
+}
+
+.conteudo .info .info-conteudo{
+    width: 480px;
+    margin: 0 50px;
+    font-size: 16pt;
+}
+
+.conteudo .info .info-conteudo p{
+    color: #8a8a8a;
+}
+
+footer{
+    text-align: center;
+    background-color:rgb(48, 0, 56);
+    padding: 50px 0;
+    font-size: 16pt;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .75);
+}
+
+footer .ft-invite{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-bottom: 1px solid #a800b8;
+    margin: 20px 50px;
+}
+
+footer .ft-invite h2{
+    padding: 20px;
+    width: 100%;
+    text-align: left;
+}
+
+footer .ft-invite button{
+    width: 280px;
+    padding: 20px;
+    background: linear-gradient(160deg, #a800b8, #750080);
+    color: #ffffff;
+    font-size: 14pt;
+    border: none;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+@keyframes izzys{
+    from{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeTop{
+    from{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeBottom{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeRight{
+    from{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.invisivel{
+    opacity: 0;
+    transform: translateX(50px);
+    transition: .5s ease;
+}
+
+.invisivel:nth-child(2n){
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: .5s ease;
+}
+
+#animar{
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
+.title{
+    font-size: 36pt;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.subtitle{
+    font-size: 24pt;
+    margin: 10px auto;
+    text-align: center;
+    font-family: 'Roboto';
+}
+
+@media (max-width: 1024px){
+    ul.ul-desktop{
+        display: none;
+    }
+
+    .menu ul.ul-mobile{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .menu ul.ul-mobile li .menu-dropdown{
+        display: none;
+        background: #8c00ff;
+        width: 100%;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        z-index: 10;
+    }
+
+    ul.ul-mobile li #input-menu-dropdown{
+        display: none;
+    }
+
+    ul.ul-mobile li #input-menu-dropdown:checked ~ .menu-dropdown{
+        display: flex;
+        flex-direction: column;
+    }
+
+    ul.ul-mobile li label{
+        margin: 20px;
+    }
+
+    ul.ul-mobile li label .menu-hamburguer{
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        filter: invert(100%);
+    }
+
+    .cabeçalho{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cabeçalho .left{
+        display: none;
+    }
+
+    .cabeçalho .right{
+        width: 90%;
+        margin: 0;
+    }
+
+    .conteudo .info{
+        flex-direction: column;
+    }
+
+    .conteudo .info img{
+        width: 100%;
+    }
+
+    .conteudo .info .info-conteudo{
+        width: 90%;
+        font-size: 12pt;
+        margin: 20px 0;
+    }
+
+    .conteudo .info{
+        border: none;
+        margin: 50px 0;
+    }
+    
+    .conteudo .info:nth-child(2n){
+        border: none;
+    }
+
+    footer .ft-invite{
+        display: none;
+    }
+
+    .invisivel{
+        opacity: 1;
+        transform: translateX(0) translateY(50px);
+    }
+
+    .title{
+        font-size: 24pt;
+    }
+
+    .subtitle{
+        font-size: 14pt;
+    }
+}
