@@ -39,3 +39,13 @@ Após a configuração, execute o seguinte comando para iniciar o projeto:
 npm start
 # ou
 yarn start
+```
+
+### ⚠️ | Bug:
+Cloudflare está barrando arquivos acima de 100MB.
+
+#### Descrição do Problema:
+Ao tentar enviar arquivos acima de 100MB, recebemos uma mensagem de falha de upload. No entanto, após investigação mais aprofundada, determinamos que o problema não está no sistema em si. Suspeitamos que isso possa ser causado por uma interação entre o proxy da nossa atual hospedagem (Squarecloud) e a Cloudflare, ou pode ser apenas um problema com a configuração da Cloudflare.
+
+#### Ações Tomadas:
+Estaremos realizando testes em outros ambientes sem o proxy para determinar a causa raiz do problema e encontrar uma solução adequada.
